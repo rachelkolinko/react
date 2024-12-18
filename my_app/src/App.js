@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Test from './components/test'
 import ChangeImg from './lesson_2/component/ChangeImg'
-
+import Example from './lesson_3/components/Example';
 
 function App() {
   return (
@@ -23,7 +23,8 @@ function App() {
   //     </header>
   // </div>
   <>
-      <ChangeImg></ChangeImg>
+      {/* <ChangeImg></ChangeImg> */}
+      <Example></Example>
   </>
   );
 }
