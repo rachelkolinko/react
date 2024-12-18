@@ -21,7 +21,9 @@ function App() {
   //       </a>
   //     </header>
   // </div>
-  <Test></Test>
+  <>
+      <ChangeImg></ChangeImg>
+  </>
   );
 }
 
