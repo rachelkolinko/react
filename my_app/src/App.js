@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Test from './components/test'
+import ChangeImg from './lesson_2/component/ChangeImg'
 
 
 function App() {
