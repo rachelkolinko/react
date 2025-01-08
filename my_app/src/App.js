@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Test from './components/test'
-import ChangeImg from './lesson_2/component/ChangeImg'
+import Test from './components/test';
+//import ChangeImg from './lesson_2/components/ChangeImg';
 import Example from './lesson_3/components/Example';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
@@ -10,6 +10,7 @@ import Home from './lesson_4/components/Home';
 import Contact from './lesson_4/components/Contact';
 import Service from './lesson_4/components/Service';
 import About from './lesson_4/components/About';
+import Thank from './lesson_4/components/Thank';
 // function App() {
 //   return (
 //   //   <div className="App">
@@ -48,6 +49,7 @@ function App(){
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/service" element={<Service/>}/>
+          <Route path="/Thank" element={<Thank/>}/>
         </Routes>
         </BrowserRouter>
     );
