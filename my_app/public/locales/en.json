@@ -1,0 +1,25 @@
+
+{
+  "Home":{
+    "title": "  home page",
+    "descrption": "home🏡🏡home🏡🏡home🏡🏡home🏡🏡"
+  },
+
+  "About":{
+    "title": "about",
+    "descrption":"about about about .................."
+  },
+  "Service":{
+    "title": "page service ",
+    "descrption":"serviceserviceserviceservice................."
+  },
+  "Contact":{
+    "title": "phon ",
+    "descrption":" phon phon phon phon phon📞📞📞",
+    "buttonContact": "go to thank"
+  },
+  "Thank":{
+    "descrption":"thank✔✔✔"
+ }
+}
+

@@ -11,6 +11,9 @@ import Contact from './lesson_4/components/Contact';
 import Service from './lesson_4/components/Service';
 import About from './lesson_4/components/About';
 import Thank from './lesson_4/components/Thank';
+import i18n from './i18n';
+import { I18nContext } from 'react-i18next';
+
 // function App() {
 //   return (
 //   //   <div className="App">
@@ -35,14 +38,27 @@ import Thank from './lesson_4/components/Thank';
 //   </>
 //   );
 // }
-function App(){
-    return(
-        <BrowserRouter>
+
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+function App() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  return (
+    <div >
+      <BrowserRouter>
         <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/">Home</Link>|
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/about">About</Link>|
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/contact">Contact</Link>|
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/service">Service</Link>
+          <button type="button" class="btn btn-light" onClick={() => changeLanguage('en')}> english</button>
+          <button type="button" class="btn btn-light" onClick={() => changeLanguage('he')}>עברית</button>
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/">{t('Home.title')}</Link>|
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/about">{t('About.title')}</Link>|
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/contact">{t('Contact.title')}</Link>|
+          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/service">{t('Service.title')}</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -52,7 +68,9 @@ function App(){
           <Route path="/Thank" element={<Thank/>}/>
         </Routes>
         </BrowserRouter>
-    );
+      
+    </div>
+  );
 }
 
 export default App;

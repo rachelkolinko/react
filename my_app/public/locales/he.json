@@ -1,0 +1,23 @@
+{
+  "Home":{
+    "title": " דף הבית",
+    "descrption":"בית בית בית בית🏡🏡🏡"
+ },
+
+  "About":{
+    "title": "אודות החברה",
+    "descrption":"אודות אודות אודות"
+ },
+  "Service":{
+    "title": "השרותים שלנו ",
+    "descrption":"שרות שרות שרות"
+ },
+  "Contact":{
+    "title": " ליצירת קשר:",
+    "descrption":" טלפון טלפון טלפון📞📞📞",
+    "buttonContact": "לתודה"
+ },
+ "Thank":{
+    "descrption":"תודה ✔✔✔"
+ }
+}
