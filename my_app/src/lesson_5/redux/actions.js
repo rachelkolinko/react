@@ -1,10 +1,11 @@
-export const addtodo = (task) => ({
-    type: ADDTODO,
-    payLoad: task,
-})
+import { ADD_TASK, REMOVE_TASK } from "./actionTypes";
 
+export const addTask = (task) => ({
+  type: ADD_TASK,
+  payload: task,
+});
 
-export const removetodo = (id) => ({
-    type: REMOVETODO,
-    payLoad: id,
-})
+export const removeTask = (index) => ({
+  type: REMOVE_TASK,
+  payload: index,
+});

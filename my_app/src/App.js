@@ -41,6 +41,10 @@ import { I18nContext } from 'react-i18next';
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { Provider } from "react-redux";
+import store from './lesson_5/redux/store';
+import TodoList from './lesson_5/components/TodoList';
+
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -50,26 +54,31 @@ function App() {
   };
 
   return (
-    <div >
-      <BrowserRouter>
-        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-          <button type="button" class="btn btn-light" onClick={() => changeLanguage('en')}> english</button>
-          <button type="button" class="btn btn-light" onClick={() => changeLanguage('he')}>עברית</button>
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/">{t('Home.title')}</Link>|
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/about">{t('About.title')}</Link>|
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/contact">{t('Contact.title')}</Link>|
-          <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/service">{t('Service.title')}</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/about" element={<About/>}/>
-          <Route path="/contact" element={<Contact/>}/>
-          <Route path="/service" element={<Service/>}/>
-          <Route path="/Thank" element={<Thank/>}/>
-        </Routes>
-        </BrowserRouter>
+    // <div >
+    //   <BrowserRouter>
+    //     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    //       <button type="button" class="btn btn-light" onClick={() => changeLanguage('en')}> english</button>
+    //       <button type="button" class="btn btn-light" onClick={() => changeLanguage('he')}>עברית</button>
+    //       <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/">{t('Home.title')}</Link>|
+    //       <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/about">{t('About.title')}</Link>|
+    //       <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/contact">{t('Contact.title')}</Link>|
+    //       <Link class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" to="/service">{t('Service.title')}</Link>
+    //     </nav>
+    //     <Routes>
+    //       <Route path="/" element={<Home/>}/>
+    //       <Route path="/about" element={<About/>}/>
+    //       <Route path="/contact" element={<Contact/>}/>
+    //       <Route path="/service" element={<Service/>}/>
+    //       <Route path="/Thank" element={<Thank/>}/>
+    //     </Routes>
+    //     </BrowserRouter>
       
-    </div>
+    // </div>
+    <Provider store={store}>
+      <div className="App">
+        <TodoList />
+      </div>
+    </Provider>
   );
 }
 
