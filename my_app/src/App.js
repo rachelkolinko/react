@@ -46,6 +46,7 @@ import store from './lesson_5/redux/store';
 import TodoList from './lesson_5/components/TodoList';
 import Date from './lesson_6/components/Date';
 import WithLogging from './lesson_6/components/WithLogging';
+import DisplyTable from './lesson_9/components/DisplayTable';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -75,13 +76,13 @@ function App() {
     //     </BrowserRouter>
       
     // </div>
-    <Provider store={store}>
-      <div className="App">
-        <TodoList />
-      </div>
-      <DateWithLogging date="26/02/2025"></DateWithLogging>
-    </Provider>
-
+    // <Provider store={store}>
+    //   <div className="App">
+    //     <TodoList />
+    //   </div>
+    //   <DateWithLogging date="26/02/2025"></DateWithLogging>
+    // </Provider>
+    <DisplyTable></DisplyTable>
   );
 }
 
